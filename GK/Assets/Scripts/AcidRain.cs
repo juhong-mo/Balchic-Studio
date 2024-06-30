@@ -23,7 +23,7 @@ public class AcidRain : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        this.transform.position = wPos;
     }
 
     private void FixedUpdate()
