@@ -190,6 +190,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2512387470890420964, guid: 4ec013ca6ac4f7c4eb19ff667acc21d6,
+        type: 3}
+      propertyPath: m_TagString
+      value: MainCamera
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -206,7 +211,7 @@ GameObject:
   - component: {fileID: 410087041}
   - component: {fileID: 410087040}
   - component: {fileID: 410087042}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Directional Light
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -324,7 +329,7 @@ GameObject:
   - component: {fileID: 1167446573}
   - component: {fileID: 1167446572}
   - component: {fileID: 1167446571}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: AR Session
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -384,8 +389,8 @@ GameObject:
   - component: {fileID: 1276113198}
   - component: {fileID: 1276113197}
   - component: {fileID: 1276113196}
-  m_Layer: 0
-  m_Name: Particle System
+  m_Layer: 10
+  m_Name: Background Rain
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -474,7 +479,7 @@ ParticleSystem:
   m_GameObject: {fileID: 1276113195}
   serializedVersion: 8
   lengthInSec: 5
-  simulationSpeed: 1
+  simulationSpeed: 2.4
   stopAction: 0
   cullingMode: 0
   ringBufferMode: 0
@@ -654,8 +659,8 @@ ParticleSystem:
     startColor:
       serializedVersion: 2
       minMaxState: 2
-      minColor: {r: 0.36618847, g: 0.31581524, b: 0.4433962, a: 1}
-      maxColor: {r: 0.31198826, g: 0.38679248, b: 0.3822589, a: 1}
+      minColor: {r: 0.24316926, g: 0.23865253, b: 0.2924528, a: 1}
+      maxColor: {r: 0.17297079, g: 0.21698111, b: 0.21234845, a: 1}
       maxGradient:
         serializedVersion: 2
         key0: {r: 1, g: 1, b: 1, a: 1}
@@ -1036,7 +1041,7 @@ ParticleSystem:
         m_RotationOrder: 4
     randomizeRotationDirection: 0
     gravitySource: 0
-    maxNumParticles: 1000
+    maxNumParticles: 4000
     customEmitterVelocity: {x: 0, y: 0, z: 0}
     size3D: 0
     rotation3D: 0
@@ -1104,7 +1109,7 @@ ParticleSystem:
     donutRadius: 0.2
     m_Position: {x: 0, y: 0, z: 0}
     m_Rotation: {x: 0, y: 0, z: 0}
-    m_Scale: {x: 6.3, y: 5, z: 1}
+    m_Scale: {x: 63, y: 50, z: 1}
     placementMode: 0
     m_MeshMaterialIndex: 0
     m_MeshNormalOffset: 0
@@ -1302,7 +1307,7 @@ ParticleSystem:
     rateOverTime:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 30
+      scalar: 4000
       minScalar: 10
       maxCurve:
         serializedVersion: 2
@@ -4053,7 +4058,7 @@ ParticleSystem:
   CollisionModule:
     enabled: 1
     serializedVersion: 4
-    type: 0
+    type: 1
     collisionMode: 0
     colliderForce: 0
     multiplyColliderForceByParticleSize: 0
