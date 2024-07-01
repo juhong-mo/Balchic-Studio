@@ -18,23 +18,19 @@ public class LeftButton : MonoBehaviour
         
     }
 
-    public void OnMouseDown()
-    {
-        if (ButtonDown == true)
-        {
-            moveLeft();
-        }
-    }
 
-    //
-
-    private void moveLeft()
-    {
-
-    }
-
-    private void PointerDown()
+    private void OnMouseDown()
     {
         ButtonDown = true;
+    }
+
+    private void OnMouseUp()
+    {
+        ButtonDown = false;
+    }
+
+    public bool IsButtonDown()
+    {
+        return ButtonDown;
     }
 }

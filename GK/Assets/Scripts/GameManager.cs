@@ -19,11 +19,14 @@ public class GameManager : MonoBehaviour
     public static GameManager instance;
     public MiniGames currState = MiniGames.main;
 
+    public RainGame raingame;
+
     public static int cleared;
     public static int life;
     // Start is called before the first frame update
     void Start()
     {
+
         instance = this;
     }
 

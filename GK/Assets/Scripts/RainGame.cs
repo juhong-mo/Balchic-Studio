@@ -14,17 +14,19 @@ public class RainGame : MonoBehaviour
 {
     private static bool valid = true;
 
-    private int HP;
     private float timer;
     private static float Timelimit = 20.0f;
     private Text textTimer;
 
+    private LeftButton leftbutton;
+    private RightButton rightbutton;
+
+    private Creature creature;
 
     // Start is called before the first frame update
     void Start()
     {
         timer = 0.0f;
-        HP = 5;
     }
 
     // Update is called once per frame
@@ -32,9 +34,14 @@ public class RainGame : MonoBehaviour
     {
         timer += Time.deltaTime;
 
+        if(creature.GetHP() >= 0)
+        {
+            creature.gameObject.SetActive(false);
+        }
+
         if(calcShownTimer() <= 0)
         {
-            if(HP > 0)
+            if(creature.GetHP() > 0)
             {
                 valid = false;
             }

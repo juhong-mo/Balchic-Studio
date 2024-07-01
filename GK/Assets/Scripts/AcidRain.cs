@@ -11,6 +11,14 @@ public class AcidRain : MonoBehaviour
 
     private Vector3 rainPos;
 
+    ParticleSystem ps;
+    List<ParticleSystem.Particle> inside = new List<ParticleSystem.Particle>();
+
+    private void Awake()
+    {
+        ps = GetComponent<ParticleSystem>();
+    }
+
     // Start is called before the first frame update
     void Start()
     {
@@ -30,5 +38,21 @@ public class AcidRain : MonoBehaviour
     {
         wPos = GetComponent<ARSessionOrigin>().camera.transform.position;
         lPos = GetComponent<ARSessionOrigin>().camera.transform.localPosition;
+    }
+
+    private void OnParticleTrigger()
+    {
+        Debug.Log("Effet Trigger");
+        ps.GetTriggerParticles(ParticleSystemTriggerEventType.Inside, inside);
+
+        foreach(var v in inside)
+        {
+            Debug.Log("Effect Trigger2");
+        }
+    }
+
+    private void OnParticleCollision(GameObject other)
+    {
+        Debug.Log($"Effect Collision : {other.name}");
     }
 }

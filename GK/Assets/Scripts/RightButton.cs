@@ -9,32 +9,29 @@ public class RightButton : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        ButtonDown = false;
     }
 
     // Update is called once per frame
     void Update()
-    {
-        if (ButtonDown == true)
-        {
-            MoveRight();
-        }
-    }
-
-    //public void OnMouseDown()
-    //{
-        
-    //}
-
-    //
-
-    private void MoveRight()
     {
 
     }
 
     public void PointerDown()
     {
+        Debug.Log("Button Down!");
         ButtonDown = true;
+    }
+
+    public void PointerUp()
+    {
+        Debug.Log("Button Up!");
+        ButtonDown = false;
+    }
+
+    public bool IsButtonDown()
+    {
+        return ButtonDown;
     }
 }
