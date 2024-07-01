@@ -22,6 +22,7 @@ public class SpotScript : MonoBehaviour
             if (Physics.Raycast(ray, out hit))
             {
                 Debug.Log("Clicked on " + hit.collider.gameObject.name);
+                SceneManager.LoadScene("AcidRain");
             }
         }
     }
