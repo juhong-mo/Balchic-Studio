@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class SpotScript : MonoBehaviour
 {
@@ -21,6 +22,7 @@ public class SpotScript : MonoBehaviour
             if (Physics.Raycast(ray, out hit))
             {
                 Debug.Log("Clicked on " + hit.collider.gameObject.name);
+                SceneManager.LoadScene("AcidRain");
             }
         }
     }
