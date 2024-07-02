@@ -4200,7 +4200,7 @@ ParticleSystem:
   CollisionModule:
     enabled: 1
     serializedVersion: 4
-    type: 0
+    type: 1
     collisionMode: 0
     colliderForce: 0
     multiplyColliderForceByParticleSize: 0
@@ -5344,11 +5344,11 @@ Transform:
   m_GameObject: {fileID: 606216722}
   serializedVersion: 2
   m_LocalRotation: {x: 0.7071068, y: -0, z: -0, w: 0.7071068}
-  m_LocalPosition: {x: -384, y: -490, z: 91}
+  m_LocalPosition: {x: 0, y: 9, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 1176956624}
+  m_Father: {fileID: 903294540}
   m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
 --- !u!1 &628348174
 GameObject:
@@ -5411,11 +5411,11 @@ Transform:
   m_GameObject: {fileID: 628348174}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -384, y: -493, z: 90}
+  m_LocalPosition: {x: 0, y: 9, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 1
   m_Children: []
-  m_Father: {fileID: 1176956624}
+  m_Father: {fileID: 903294540}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &628348180
 SpriteRenderer:
@@ -5615,7 +5615,7 @@ GameObject:
   - component: {fileID: 903294539}
   - component: {fileID: 903294538}
   - component: {fileID: 903294537}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: RainGame
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5739,15 +5739,17 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 903294536}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 3}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 606216725}
+  - {fileID: 628348179}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -0.20841789, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &920886777
@@ -5952,8 +5954,6 @@ RectTransform:
   m_Children:
   - {fileID: 1550467233}
   - {fileID: 1545212893}
-  - {fileID: 628348179}
-  - {fileID: 606216725}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
@@ -11090,8 +11090,8 @@ SceneRoots:
   - {fileID: 106533402}
   - {fileID: 920886779}
   - {fileID: 903294540}
+  - {fileID: 1176956624}
   - {fileID: 1167446573}
   - {fileID: 410087041}
   - {fileID: 1276113198}
-  - {fileID: 1176956624}
   - {fileID: 436018106}
